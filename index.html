@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            task1
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+      #backimg{
+        width: 100%;
+      }
+      body,html{
+        background-image:url(images/canal.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+      #tag2{
+        color:white;
+        font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+        font-size: 1.7CM;
+        margin-left: 100px;
+        margin-bottom: 20px;
+      }
+      #tag1{
+        margin-top: 25%;
+        margin-left: 100px;
+        background-color: aliceblue;
+        width: fit-content;
+        padding: 7px;
+        border-radius: 5px;
+      }
+.tab {
+  overflow: hidden;
+  color: white;
+  background-color: black;
+  margin-left: 100px;
+  width: fit-content;
+  
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 400px;
+  padding: 10px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: maroon;
+}
+
+.tab button.active {
+  background-color: maroon;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+  color: black;
+  background-color: white;
+  margin-left: 100px;
+  width: 1200px;
+}
+.isshh{
+  justify-content: space-between;
+  margin-left: 15px;
+  width: 200px;
+  height: 35px;
+  border-radius: 5px;
+  border: 2px solid maroon;
+  
+}
+.isshh1{
+  justify-content: space-between;
+  /* margin-left: 70px;*/
+  width: 200px;
+  height: 35px;
+  border-radius: 5px;
+  border: 2px solid maroon;
+  
+}
+.isshh2{
+  justify-content: space-between;
+  margin-left: 15px;
+  width: 200px;
+  height: 35px;
+  border-radius: 5px;
+  border: 2px solid maroon;
+  
+}
+.btn.btn-default{
+  height: 35px;
+  margin-left: 6px;
+  border-radius: 5px;
+  border: 2px solid maroon;
+}
+.btn.btn-default:hover{
+  background-color: maroon ;
+  color: white;
+  
+}
+#img1{
+  width: 50%;
+  height: 500px;
+  margin-top: 100px;
+}
+#img2{
+  width: 50%;
+  height: 500px;
+}
+#img3{
+  width: 50%;
+  height: 500px;
+  margin-top: 500px;
+}
+
+
+#quotes{
+  float: right ;
+  margin-top: 315px ;
+  color: white;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 60px;
+  margin-right: 100px;
+}
+#quotes1{
+  float: right ;
+  color:black;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 60px;
+  margin-top: 0;
+  margin-right: 150px;
+}
+#quotes3{
+  float: right ;
+  margin-top: 230px ;
+  color:maroon;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 60px;
+  margin-right: 100px;
+}
+#quotes2{
+  float: right ;
+  margin-top: 230px ;
+  color:maroon;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 60px;
+  margin-left: 800px;
+  margin-right: 10px;
+}
+#quotes4{
+  float: right ;
+  color:black;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 60px;
+  margin-top: 0;
+  margin-right: 10px;
+}
+#webname{
+  color: maroon;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 1cm;
+}
+#borders{
+  border-radius: 5px;
+  border: 2px solid green;
+  box-shadow: 2px 2px 10px;
+}
+
+
+      form{
+        justify-content: right;
+      }
+    </style>
+
+
+    <script>
+      function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+      </script>
+    <header>
+      <nav class="navbar navbar-inverse" style="background-color:rgba(255,255,255,0.2);border: none; ">
+        <div style="background-color:transparent"> 
+          <div class="navbar-header">
+            <a id="webname"  class="navbar-brand" href="index.html">TOURISTS GALORE</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li ><a href="index.html" style="color: black;">Home</a></li>
+            <li><a href="#about" style="color: black;">About</a></li>
+            <li><a href="#contact" style="color: black;">Contact Us</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" style="margin-right: 10px;">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" name="search">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                  <i class="glyphicon glyphicon-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </nav>      
+    </header>
+    <body>
+      <h3 id="tag1">Everything You Need To Know</h3>
+      <h1 id="tag2"  >FIND YOUR PLACE</h1>
+    
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Lodging')" id="defaultOpen">Lodging</button>
+  <button class="tablinks" onclick="openCity(event, 'Flights')" style="padding-left:  20px;">Flights</button>
+  <button class="tablinks" onclick="openCity(event, 'Offers & Packages')" >Offers & Packages</button>
+</div>
+
+<div id="Lodging" class="tabcontent">
+  <form>
+    <label>Arrival</label>
+    <input type="date" id="Arrival" name="Arrival" class="isshh2">
+    <label style="margin-left: 15px" >Departure</label>
+    <input type="date" id="Departure" name="Departure" class="isshh2">
+    <select name="Members" id="Members" class="isshh2">
+      <option value="1">1 person</option>
+      <option value="2">2 people</option>
+      <option value="3">3 people</option>
+      <option value="4">4 people</option>
+      <option value="5">5 people</option>
+      <option value="6">6 people</option>
+      <option value="7">7 people</option>
+      <option value="8">8 people</option>
+      <option value="9">9 people</option>
+      <option value="10">10 people</option>
+    </select>
+    <select name="Children" id="Children" class="isshh2">
+      <option value="1">0 Children</option>
+      <option value="1">1 Child</option>
+      <option value="2">2 Children</option>
+      <option value="3">3 Children</option>
+      <option value="4">4 Children</option>
+      <option value="5">5 Children</option>
+      <option value="6">6 Children</option>
+      <option value="7">7 Children</option>
+      <option value="8">8 Children</option>
+      <option value="9">9 Children</option>
+      <option value="10">10 Children</option>
+    </select>
+    <button class="btn btn-default" class="isshh2">Find Lodging</button>
+  </form>
+</div>
+
+<div id="Flights" class="tabcontent">
+  <form>
+    <label style="margin-right: 50px;margin-Left: 50px">Arrival</label>
+    <input type="date" id="Departure Date" name="Departure Date" class="isshh1">
+    <label style="margin-right: 50px ;margin-Left: 50px" >Departure</label>
+    <input type="date" id="Returning Date" value="Returning Date" class="isshh1">
+    <input type="text" id="Departure Code" name="Departure City Airport Code" value="Departure City Airport Code" class="isshh1" style="margin-left: 40px">
+    <button class="btn btn-default" class="isshh1"style="margin-Left: 40px">Find Flights</button>
+  </form> 
+</div>
+
+<div id="Offers & Packages" class="tabcontent">
+  <label>Arrival Date</label>
+    <input type="date" id="Arrival" name="Arrival" class="isshh">
+    <label style="margin-left: 10px">Departure Date</label>
+    <input type="date" id="Departure" name="Departure" class="isshh">
+    <select name="Members" id="Members" class="isshh">
+      <option value="1">1 person</option>
+      <option value="2">2 people</option>
+      <option value="3">3 people</option>
+      <option value="4">4 people</option>
+      <option value="5">5 people</option>
+      <option value="6">6 people</option>
+      <option value="7">7 people</option>
+      <option value="8">8 people</option>
+      <option value="9">9 people</option>
+      <option value="10">10 people</option>
+    </select>
+    <select name="Children" id="Children" class="isshh">
+      <option value="1">0 Children</option>
+      <option value="1">1 Child</option>
+      <option value="2">2 Children</option>
+      <option value="3">3 Children</option>
+      <option value="4">4 Children</option>
+      <option value="5">5 Children</option>
+      <option value="6">6 Children</option>
+      <option value="7">7 Children</option>
+      <option value="8">8 Children</option>
+      <option value="9">9 Children</option>
+      <option value="10">10 Children</option>
+    </select>
+    <button class="btn btn-default" class="isshh">Find Offers</button>
+  </form>
+</div>
+
+
+
+
+<img id="img1" src="images/beach.jpg" alt="beach">
+<div style="position: absolute;right: 10px; top: 640px;">
+<h2 id="quotes">THE BEACH IS CALLING </br><span id="quotes1">YOU MUST GO</span></h2>
+</div>
+</br>
+<div style="position: absolute;margin-left: 70px; top: 1200px;">
+  <h2 id="quotes3">I'M MANOEUVRING OUT </br><span id="quotes1">TO BUDAEST</span></h2>
+  </div>
+<img id="img2" src="images/budapest.jpg" alt="budapest"style="float: right ;">
+<img id="img3" src="images/himalaya.jpg" alt="himalaya">
+<div style="position: absolute;right: 0; top: 1700px;">
+<h2 id="quotes2">IT IS THE MOUNTAIN THAT</br><span id="quotes4">HAS BEEN CALLING "YOU"</span></h2>
+</div>
+<hr>
+<div id="about" style="padding: 20px;font-family: 'Times New Roman', Times, serif;font-size: large;">
+<center><h1>About Us</h1></br>
+<p>‘TOURISTS GALORE’</br>
+
+  “Travel is the main thing you purchase that makes you more extravagant”.</br>
+</center>
+<p>
+   We, at TOURISTS GALORE, swear by this and put stock in satisfying travel dreams that make you perpetually rich constantly. 
+  We have been moving excellent encounters for a considerable length of time through our
+   cutting-edge planned occasion bundles and other fundamental travel administrations.
+   We rouse our clients to carry on with a rich life, brimming with extraordinary travel encounters.
+  </p>
+   <p>
+   Through our exceptionally curated occasion bundles, we need to take you on an adventure where you 
+   personally enjoy the stunning magnificence of Countries and far-off terrains. We need you to observe sensational scenes 
+   that are a long way past your creative ability.
+  </p>
+  <p>The powerful inclination of Country voyagers to travel more nowadays is something that keeps us inspired to satisfy 
+    our vacation necessities. Our vision to give you a consistent occasion encounter makes us one of the main visit administrators 
+    in the regularly extending travel industry.
+  </p> 
+  <p>
+To guarantee that you have a satisfying occasion and healthy encounters, all our vacation administrations are available to 
+your no matter what. On your universal occasion, we guarantee that you are very much outfitted with outside trade 
+(Forex Cards, Currency Notes), visa, and travel protection.
+</p>
+</p>
+</div>
+<hr>
+<div id="contact" style="padding: 20px;font-family: 'Times New Roman', Times, serif;font-size: large;">
+<center><h1 style="margin-top: 20px;margin-bottom: 20px;">  Contact Us </h1> </center>
+		<p ><strong>For additional Information -</strong></p>
+
+				<div class="row mb-5" id="contact-us">
+					<div class="col-md-4 col-12">
+						<div class="border border-success rounded shadow text-center p-3">
+							<div id="borders">
+								<h3>Let's Talk</h3>
+								<p><b>Phone:</b> +91-9876543210</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-12">
+						<div class="border border-success rounded shadow text-center p-3">
+							<div id="borders">
+								<h3>Drop a Line</h3>
+								<p><b>Email:</b> xyz@gmail.com</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-12">
+						<div class="border border-success rounded shadow text-center p-3">
+							<div id="borders">
+								<h3>24x7 Support</h3>
+								<p><b>Customer:</b> 1800 101 303</p>
+							</div>
+						</div>
+					</div>
+				</div>
+      </div>
+
+  
+        
+</body>
+</html>
